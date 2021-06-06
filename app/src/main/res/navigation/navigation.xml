@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.android.navigation.TitleFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_baseballPIC"
+            app:destination="@id/baseballPIC" />
+        <action
+            android:id="@+id/action_titleFragment_to_basketballPIC"
+            app:destination="@id/basketballPIC" />
+        <action
+            android:id="@+id/action_titleFragment_to_footballPIC"
+            app:destination="@id/footballPIC" />
+        <action
+            android:id="@+id/action_titleFragment_to_otherPIC"
+            app:destination="@id/otherPIC" />
+    </fragment>
+    <fragment
+        android:id="@+id/baseballPIC"
+        android:name="com.example.android.navigation.GameFragment"
+        android:label="@string/frgment_name"
+        tools:layout="@layout/fragment_game"/>
+    <fragment
+        android:id="@+id/basketballPIC"
+        android:name="com.example.android.navigation.AboutFragment"
+        android:label="@string/frgment_name"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/footballPIC"
+        android:name="com.example.android.navigation.GameOverFragment"
+        android:label="@string/frgment_name"
+        tools:layout="@layout/fragment_game_over" />
+    <fragment
+        android:id="@+id/otherPIC"
+        android:name="com.example.android.navigation.GameWonFragment"
+        android:label="@string/frgment_name"
+        tools:layout="@layout/fragment_game_won" />
+</navigation>
